@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Car Track Mania
 
-Things you may want to cover:
 
-* Ruby version
+Driver
+has_many :track_times
+has_many :tracks through: :tracktimes 
 
-* System dependencies
+Track 
+has_many :tracktimes
+has_many  :drivers, through: :tracktimes
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+TrackTime 
+belongs_to :driver
+belongs_to :track
