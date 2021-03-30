@@ -29,6 +29,13 @@ class TracksController < ApplicationController
     end
 
 
+    def destroy
+        @track = Track.find(params[:id])
+        @track.delete
+        render :index
+    end
+
+
     private 
 
     def track_params

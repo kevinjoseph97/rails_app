@@ -2,4 +2,7 @@
 <h1> Welcome To The <%=@track.name%> In <%=@track.location%>  </h1> 
 
 
+<%# Lets show the lap times of the racers...  %>
+
+<%= button_to "Delete", track_path(@track), method: :delete %>
 
