@@ -1,16 +1,4 @@
 # README
 
-Car Track Mania
+Welcome to the App
 
-
-Driver
-has_many :track_times
-has_many :tracks through: :tracktimes 
-
-Track 
-has_many :tracktimes
-has_many  :drivers, through: :tracktimes
-
-TrackTime 
-belongs_to :driver
-belongs_to :track

@@ -1,0 +1,9 @@
+<h2>Here are all the tracks</h2>
+
+<ul>
+<% Track.all.each do |t| %>
+   <li><%= t.name%> held in <%= t.location%></li> 
+<% end %>
+</ul>
+
+
