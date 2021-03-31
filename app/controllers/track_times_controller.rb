@@ -1,0 +1,2 @@
+class TrackTimesController < ApplicationController
+end

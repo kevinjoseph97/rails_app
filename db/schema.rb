@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_30_204410) do
+ActiveRecord::Schema.define(version: 2021_03_31_164123) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 2021_03_30_204410) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "track_times", force: :cascade do |t|
+    t.integer "track_id", null: false
+    t.integer "driver_id", null: false
+    t.integer "laptime"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["driver_id"], name: "index_track_times_on_driver_id"
+    t.index ["track_id"], name: "index_track_times_on_track_id"
+  end
+
   create_table "tracks", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -27,4 +37,6 @@ ActiveRecord::Schema.define(version: 2021_03_30_204410) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "track_times", "drivers"
+  add_foreign_key "track_times", "tracks"
 end

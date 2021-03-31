@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :track_times
   resources :drivers
   root 'application#home'
 

@@ -1,17 +1,5 @@
 <h1>Welcome New Driver!!!</h1>
 
 
-<%= form_for @driver do |f|%>
-    <%= f.label :name%>
-    <%= f.text_field :name%>
-
-    <%= f.label :password%>
-    <%= f.password_field :password%>
-
-    <%= f.label :car %>
-    <%= f.text_field :car %>
-
-    <%=f.submit %>
-
-<% end %>
+<%= render 'driverform' %>
 

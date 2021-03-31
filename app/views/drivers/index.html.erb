@@ -1,6 +1,7 @@
 <h1>Here is everyone  else </h1>
 
 <ul>
+<%# add in their lap times when made %>
 <%Driver.all.each do |driver| %>
     <li><%= link_to "#{driver.name}", driver %></li>
 <% end %>
