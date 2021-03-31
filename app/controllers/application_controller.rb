@@ -8,6 +8,12 @@ class ApplicationController < ActionController::Base
     def show_time
     end
 
+    #set up current driver 
+    def current_driver 
+    end
+
+
+
 
 
 end
