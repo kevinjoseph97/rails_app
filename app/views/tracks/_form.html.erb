@@ -1,6 +1,10 @@
 <%= form_for @track do |f| %>
-  Track Name: <%= f.text_field :name %>
-    Location: <%= f.text_field :location %>
+  
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :location %>
+  <%= f.text_field :location %>
    
-    <%= f.submit %>
+  <%= f.submit %>
 <% end %> 
