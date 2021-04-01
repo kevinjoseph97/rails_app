@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_31_164123) do
+ActiveRecord::Schema.define(version: 2021_04_01_010554) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_03_31_164123) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "racemaster"
   end
 
   create_table "track_times", force: :cascade do |t|
